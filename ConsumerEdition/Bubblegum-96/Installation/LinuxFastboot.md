@@ -42,7 +42,7 @@ $ sudo apt-get dist-upgrade
 
 ```shell
 $ sudo apt-get install git
-$ sudo apt-get install libusb-1.0-0
+$ sudo apt-get install libusb-1.0-0 libusb-1.0-0-dev
 ```
 
 ### **Step 3:** Download, Build, and Install linaro-adfu-tool
@@ -78,7 +78,7 @@ Once you have downloaded the appropriate files, continue to **Step 5**
 - Release the ADFU key
 - Execute `lsusb` on host PC. 
    - You will find a device ID 10d6:10d6 if Bubblegum96  board has entered adfu-mode
-   - If Bubblegum96 board has not entered ADFU mode,  retry step 1-7
+   - If Bubblegum96 board has not entered ADFU mode,  retry step 5
 
 ### **Step 6:** Access 96board U-boot shell
 
