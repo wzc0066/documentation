@@ -132,6 +132,10 @@ The kernel image of 96board is located at boot.emmc.img
 _**[Host PC]**_
 
 `$ sudo fastboot flash BOOT boot.emmc.img`
+
+If not find "fastboot" command, install first:
+
+`$ sudo apt-get install android-tools-fastboot`
 	
 **Note:** `boot.emmc.img` is a vfat format image, it contains kernel image, initramfs image, device tree blob, logo image used by u-boot
 
@@ -158,9 +162,9 @@ $ dd if=/dev/zero of=bootloader.img bs=1M count=6
 # Place bootloader.bin to correct place.
 $ dd conv=notrunc if=bootloader.bin of=bootloader.img seek=4063 bs=512
 # Place u-boot-dtb.img to correct place.
-$dd conv=notrunc if=u-boot-dtb.img of=bootloader.img seek=6110 bs=512
+$ dd conv=notrunc if=u-boot-dtb.img of=bootloader.img seek=6110 bs=512
 # Use fastboot to flash BOOTLOADER partition
-$fastboot flash BOOTLOADER bootloader.img
+$ sudo fastboot flash BOOTLOADER bootloader.img
 ```
 
-After these 8 steps, Bubblegum-96 board will reboot automatically.
+After these 10 steps, Bubblegum-96 board will reboot automatically.
